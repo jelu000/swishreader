@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SwishXlsReader</title>
+<meta name="generator" content="Bluefish 2.2.7" >
+<meta name="author" content="jens" >
+<meta name="date" content="2018-09-18T22:41:16+0200" >
+<meta name="copyright" content="jens lundeqvist">
+<meta name="keywords" content="Swedbank, Swish, avstämning, konto, bokföring, bokföra, flera,  transaktioner, rapport, reporter, Swishtransaktioner, kontorapport">
+<meta name="description" content="Ett script för att summera swish transaktioner från Swedbanks xls rapporter">
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="expires" content="0">
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="xlsx.core.min.js"></script>
+<script type="text/javascript" src="JXlsReade.js"></script>
+</head>
+
+<body>
+
+<div align="center" style="width: 80%; margin: auto; font-family: sans-serif;" id="main">
+<h2>Bokföra och summera Swish transaktioner från Swedbanks xls filer!</h2>
+ <br><br>
+<p align="left">Syftet med den här sidan är att underlätta för Swedbanks föreatgagskunder som börjat använda Swish som inbetbetaningmetod till sina kunder!
+Den här sidan konverterar Swedbanks transaktionsrapporter som sparats i xls-format så att Swishtransaktionerna för en och samma dag summeras. Detta för att lättare kunna bokföra de affärshändelser som sker i en näringsverksamhet som använder Swish-företag som betalningsmetod.
+</p>
+<br>
+<p align="left">
+Logga in på Swedbank och ditt konto och skapa en <strong>transaktionsrapport</strong> för valfri månad eller period. Gå in på  beställda rapporter och välj den <strong>transaktionsrapport</strong> du skapat och spara ner den i .xls format. Öppna och välj sedan filen du sparat ner på denna sida så ska transaktionerna summeras på dagar och visas på ett ett sånt sätt att de blir lätt att få en överblick över dem. Man kan sedan lätt skrivas ut sammanställningen.
+Programmet körs lokalt i din webbläsare så ingen data från din xls fil skickas över nätet! De är alltid bra att kontrollera med överslagsräkning om summan man får ut verkar stämma.
+</p>
+<br>
+<p>Här kan ni ladda ner en test fil: <a href="Transaktionsrapport_test.xls" name="Transaktionsrapport_test.xls" title="Transaktionsrapport_test.xls">Transaktionsrapport_test.xls </a>för att testa scriptet.</p>
+<br>
+<input type="file" id="files" name="files"/>
+
+
+</div>
+</body>
+</html>
