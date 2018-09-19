@@ -4,7 +4,7 @@
 <title>SwishXlsReader</title>
 <meta name="generator" content="Bluefish 2.2.7" >
 <meta name="author" content="jens" >
-<meta name="date" content="2018-09-18T22:39:51+0200" >
+<meta name="date" content="2018-09-19T19:29:04+0200" >
 <meta name="copyright" content="jens lundeqvist">
 <meta name="keywords" content="Swedbank, Swish, avstämning, konto, bokföring, bokföra, flera,  transaktioner, rapport, reporter, Swishtransaktioner, kontorapport">
 <meta name="description" content="Ett script för att summera swish transaktioner från Swedbanks xls rapporter">
@@ -26,7 +26,7 @@
 <div align="center" style="width: 80%; margin: auto; font-family: sans-serif;" id="main">
 <h2>Bokföra och summera Swish transaktioner från Swedbanks xls filer!</h2>
  <br><br>
-<p align="left">Syftet med den här sidan är att underlätta för Swedbanks föreatgagskunder som börjat använda Swish som inbetbetaningmetod till sina kunder!
+<p align="left">Syftet med den här sidan är att underlätta för Swedbanks föreatgagskunder som börjat använda Swish som betalningsmetod till sina kunder!
 Den här sidan konverterar Swedbanks transaktionsrapporter som sparats i xls-format så att Swishtransaktionerna för en och samma dag summeras. Detta för att lättare kunna bokföra de affärshändelser som sker i en näringsverksamhet som använder Swish-företag som betalningsmetod.
 </p>
 <br>
@@ -35,11 +35,13 @@ Logga in på Swedbank och ditt konto och skapa en <strong>transaktionsrapport</s
 Programmet körs lokalt i din webbläsare så ingen data från din xls fil skickas över nätet! De är alltid bra att kontrollera med överslagsräkning om summan man får ut verkar stämma.
 </p>
 <br>
-<p>Här finns en test fil: <a href="Transaktionsrapport_test.xls" name="Transaktionsrapport_test.xls" title="Transaktionsrapport_test.xls">Transaktionsrapport_test.xls </a>för att testa scriptet.</p>
 <br>
 <input type="file" id="files" name="files"/>
 
+<br><br><br>
+<p>Här finns källkoden till scriptet och ladda ner: <a href="https://github.com/jelu000/swishreader" target="_self" name="https://github.com/jelu000/swishreader" title="https://github.com/jelu000/swishreader">https://github.com/jelu000/swishreader</a></p>
 
+<p>Här kan ni ladda ner en test fil: <a href="Transaktionsrapport_test.xls" name="Transaktionsrapport_test.xls" title="Transaktionsrapport_test.xls">Transaktionsrapport_test.xls </a>för att testa scriptet.</p>
 </div>
 </body>
 </html>
