@@ -18,13 +18,18 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="xlsx.core.min.js"></script>
-<script type="text/javascript" src="JXlsReade.js"></script>
+<script type="text/javascript" src="NewSwebXlsxReader.js"></script>
 </head>
 
 <body>
 
 <div align="center" style="width: 80%; margin: auto; font-family: sans-serif;" id="main">
 <h2>Bokföra och summera Swish transaktioner från Swedbanks xls filer!</h2>
+ <br><br>
+ <p align="left">
+   Obs, efter att Swedbank har en ny version av internetbanken så har de ändrat på formatet på trasaktionrapporter till XLSX FileReader.
+   Jag har därför vart tvungen att programera om sidan men hoppas att de ska fungerar nu.
+ </p>
  <br><br>
 <p align="left">Syftet med den här sidan är att underlätta för Swedbanks föreatgagskunder som börjat använda Swish som betalningsmetod till sina kunder!
 Sidan konverterar Swedbanks transaktionsrapporter som sparats i xls-format så att Swishtransaktionerna för en och samma dag summeras. Detta för att lättare kunna bokföra de affärshändelser som sker i en näringsverksamhet som använder Swish-företag som betalningsmetod.
@@ -41,7 +46,7 @@ Programmet körs lokalt i din webbläsare så ingen data från din xls fil skick
 <br><br><br>
 <p>Här finns källkoden till scriptet och ladda ner: <a href="https://github.com/jelu000/swishreader" target="_self" name="https://github.com/jelu000/swishreader" title="https://github.com/jelu000/swishreader">https://github.com/jelu000/swishreader</a></p>
 
-<p>Här kan ni ladda ner en test fil: <a href="Transaktionsrapport_test.xls" name="Transaktionsrapport_test.xls" title="Transaktionsrapport_test.xls">Transaktionsrapport_test.xls </a>för att testa scriptet.</p>
+<!--<p>Här kan ni ladda ner en test fil: <a href="Transaktionsrapport_test.xls" name="Transaktionsrapport_test.xls" title="Transaktionsrapport_test.xls">Transaktionsrapport_test.xls </a>för att testa scriptet.</p>-->
 </div>
 </body>
 </html>
