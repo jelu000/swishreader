@@ -80,7 +80,7 @@ function pickOutcoms(twoD_Array){
     //flytta refferens om de är bellop till rätt plats i radArrayen
     //console.log(trow_array[5]);
     if (trow_array[5] === ""){
-      console.log("Innne " +trow_array[5]);
+      //console.log("Innne " +trow_array[5]);
       trow_array[5] = trow_array[4];
       //trow_array[10] = trow_array[4];
       trow_array[4] = "Utbet 1930";
@@ -96,6 +96,8 @@ function pickOutcoms(twoD_Array){
 
   }//end of forloop
 
+  //Vänder arrayen så att datum kommer i kronologisk ordning
+  verTransArray.reverse();
   //console.log(verTransArray);
   return verTransArray;
 }
@@ -148,13 +150,9 @@ function newAddSumm(tdatatable, datatable){
     datarowA=tdatatable[it+1];
     var newrow=[];
 
-
-    //newrow[0-kontonr]newrow[1-datum]newrow[2-verinfo]newrow[3-Swish]newrow[3-trans]newrow[4-saldo]
-
     try {
       //console.log('--------------------------------------------');
       //console.log(datarow);
-
       //om de är samma datum dagen efter
       if (String(datarow[1])== String(datarowA[1]))
       {
@@ -162,32 +160,30 @@ function newAddSumm(tdatatable, datatable){
         saldot = saldot+Number(datarow[3]);
         //console.log('GÅR IN ' + saldot);
       }
-
       //om de inte är samma datum efter
       else if (datarow[1]!=datarowA[1])
       {
             //addera summan till saldot variabel & lägg & skapa ny rad och lägg till till nya datatablearrayen
             saldot = saldot+Number(datarow[3]);
- //1-Referens|2-Bokfdag|3-TransaktionsTyp|4-Belopp|5-Saldo
+            //1-Referens|2-Bokfdag|3-TransaktionsTyp|4-Belopp|5-Saldo
             //        Refferens     Datum    Swish    SwishSaldoDag Saldo
             newrow = [datarow[0], datarow[1], datarow[2], saldot , datarow[4]];
             newtable.push(newrow);
 
             // töm saldot variabel
             saldot=0;
-
-
       }
-    it++;
-  }//en try
-  catch (err){
-    console.log('Sista catch='+ datarow);
-    break;
-  }//end catch
+      it++;
+    }//en try
+    catch (err){
+      //console.log('Sista catch='+ err);
+      break;
+    }//end catch
 
 
   }//end of while
-
+  //Vänder array med swishtransaktioner till konologisk ordning
+  newtable.reverse();
   //testPrint(newtable);
   createHtmlTable(newtable, datatable);
 }//end of function
@@ -212,7 +208,7 @@ function testPrint(t_datatable){
 //------------------------------------------------------------------------------------------
 
 function createHtmlTable(twoD_Array, tDataTable) {
-
+  console.log("Jens Lundeqvist 2020-12-02");
   var otherOutComes = pickOutcoms(tDataTable);
 
   var maintabledata = "";
