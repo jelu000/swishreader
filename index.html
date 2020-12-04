@@ -4,7 +4,7 @@
 <title>SwishXlsReader</title>
 <meta name="generator" content="Bluefish 2.2.10" >
 <meta name="author" content="jens" >
-<meta name="date" content="2020-12-04T00:44:06+0100" >
+<meta name="date" content="2020-12-04T16:43:32+0100" >
 <meta name="copyright" content="jens lundeqvist">
 <meta name="keywords" content="Swedbank, Swish, avstämning, konto, bokföring, bokföra, flera,  transaktioner, rapport, reporter, Swishtransaktioner, kontorapport">
 <meta name="description" content="Ett script för att summera swish transaktioner från Swedbanks xls rapporter">
@@ -46,6 +46,7 @@
   }
   img{
     margin: 10px;
+    display: block;
   }
 
   input{
@@ -70,23 +71,25 @@
 <body>
 
 <div class="maindiv" align="center" id="main">
-<h2>Summera Swish-transaktioner per dag från Swedbanks Internetbank!</h2>
+<h2>Summera Swish-transaktioner per dag för företagskunder i Swedbanks Internetbank!</h2>
 
 <h4>2020-12-01 &#169;Jens Lundeqvist</h4>
 
  <p>
     Obs, efter att Swedbank har en ny version av internetbanken så har de ändrat på formatet på trasaktionrapporter från XLS till XLSX format.
-   Jag har därför vart tvungen att programera om sidan men hoppas att de ska fungerar nu.
+   Jag var därför tvungen att koda om sidan men hoppas att de ska fungerar nu. Denna sida fungerar endast till företags-swish, dvs nummer som börjar på 123!
  </p>
 
 <p>Jag har saknat en funktion i Swedbanks Internetbank för föreatgagskunder som använder Swish som betalningsmetod. De jag saknat är
-  att kunna summera inbetalningar gjorda med Swish per dag. Det för att slippa sitta med miniräknare och göra detta manuellt och därfö gjorde jag denna sida.
+  att kunna summera inbetalningar gjorda med Swish per dag. Det för att slippa sitta med miniräknare och göra detta manuellt, därför gjorde jag denna sida.
 Sidan konverterar Swedbanks transaktionsrapporter som sparats i xlsx-format så att Swishtransaktionerna för en och samma dag summeras.
 De gör det lättare kunna bokföra och stämma av affärshändelser som sker på samma dag i en näringsverksamhet som använder Swish betalningsmetod.
 </p>
 
-<h4>Logga in på Swedbank och gör så här</h4>
-<img src="swedbankdump.png" width="400" height="311" alt="swedbank">
+<h4>Logga in på Swedbank och gör så här:</h4>
+
+<img src="sweswish1.png" width="500" height="153" alt="">
+<img src="sweswish2.png" width="300" height="239" alt="">
 <ol>
 <li>På din kontosida välj mellan vilka datum transaktioner ska visas</li>
 <li>Tryck på exportera</li>
